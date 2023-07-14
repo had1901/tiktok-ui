@@ -7,7 +7,8 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-            {publicRoutes.map((route, index) => {           
+            {publicRoutes.map((route, index) => {        
+              console.log(route)   
               const Page = route.component
               let Layout = DefaultLayout
               if(route.layout) {
@@ -15,15 +16,11 @@ function App() {
               } else if(route.layout === null) {
                 Layout = Fragment
               }
-              return <Route 
-                          key={index} 
-                          path={route.path} 
-                          element={
-                            <Layout>
-                              <Page/>
-                            </Layout>
-                          }
+              return <Route  
+                            key={index} path={route.path} 
+                            element={<Layout><Page/></Layout>}
                       />
+                      
             }) }
         </Routes>
       </div>

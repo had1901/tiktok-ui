@@ -1,0 +1,51 @@
+.wrapper{
+    font-size: 1.4rem;
+    padding: 9px 16px;
+    border-radius: 4px;
+    font-weight: 700;
+    min-width: 100px;
+    cursor: pointer;
+    background-color: var(--white-text);
+    border: 1px solid transparent;
+    user-select: none;
+
+    + .wrapper{
+        margin-left: 8px;
+    }
+    &.disabled{
+        pointer-events: none;
+        opacity: 0.5;
+        cursor: default;
+    }
+}
+//btn type
+.rounded{
+    border-radius: 999px;
+}
+.primary{
+    background-color: var(--primary);
+    color: var(--white-text);
+}
+.outline{
+    color: var(--primary);
+    border-color: currentColor;
+}
+
+
+// size
+.small{
+    min-width: 88px;
+    padding: 4px 16px;
+}
+.large{
+    min-width: 126px;
+    padding: 14px 16px;
+}
+
+
+// text
+.text{
+    &:hover{
+        text-decoration: underline;
+    }
+}
